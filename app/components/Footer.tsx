@@ -1,4 +1,5 @@
 import { Emblem } from "./Emblem";
+import { CurrentYear } from "./CurrentYear";
 import { siteConfig } from "@/lib/site-config";
 
 export function Footer() {
@@ -15,6 +16,7 @@ export function Footer() {
         </div>
         <div className="footer-meta">
           <p>{siteConfig.city}</p>
+          <p className="footer-copy">© <CurrentYear /> INKA CORE VII</p>
           {hasSocial && (<p className="footer-social">{siteConfig.instagram && <a href={siteConfig.instagram}>Instagram</a>}{siteConfig.facebook && <a href={siteConfig.facebook}>Facebook</a>}</p>)}
         </div>
       </div>
@@ -26,6 +28,7 @@ export function Footer() {
         .footer-name em { color: var(--c-oro); font-style: normal; }
         .footer-tagline { font-family: var(--font-mono); font-size: 0.7rem; color: var(--c-ceniza-2); margin-top: 0.1rem; }
         .footer-meta { text-align: right; font-size: 0.82rem; color: var(--c-ceniza); }
+        .footer-copy { margin-top: 0.3rem; font-family: var(--font-mono); font-size: 0.7rem; color: var(--c-ceniza-2); }
         .footer-social { margin-top: 0.3rem; display: flex; gap: 0.8rem; justify-content: flex-end; }
         .footer-social a:hover { color: var(--c-oro); }
         @media (max-width: 560px) { .footer-inner { flex-direction: column; align-items: flex-start; } .footer-meta { text-align: left; } .footer-social { justify-content: flex-start; } }
